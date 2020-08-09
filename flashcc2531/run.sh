@@ -1,7 +1,7 @@
 #!/bin/bash
 echo "Startet"
 cd /flash_cc2531
-if ! ./cc_chipid | grep "ID = b524"; then echo "ChipID not found." && exit 1; fi
+if ! ./cc_chipid | grep "ID = b524"; then echo "ChipID not found."; fi
 
 echo "Downloading firmware"
 if ! wget https://github.com/Koenkk/Z-Stack-firmware/raw/master/coordinator/Z-Stack_Home_1.2/bin/default/CC2531_DEFAULT_20190608.zip; then echo "firmware not found" && exit 1; fi
